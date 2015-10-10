@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="vmpayment">
+
+<name>VM - Payment, kaznachey</name>
+<author>kaznachey</author>
+<creationDate>10.12.2014</creationDate>
+<version>1.0</version>
+<description><![CDATA[<a href="http://kaznachey.ua" target="_blank">kaznachey.ua</a>]]></description>
+
+<files>
+<filename plugin="kaznachey" folder="plugins/vmpayment">kaznachey.php</filename>
+<filename plugin="kaznachey" folder="plugins/vmpayment">kaznachey.processing.php</filename>
+<filename plugin="kaznachey" folder="plugins/vmpayment">kaznachey.success.php</filename>
+<filename folder="plugins/vmpayment" >kaznachey.xml</filename>
+</files>
+
+<params addpath="/administrator/components/com_virtuemart/elements">
+
+<param type="vmjpluginwarning" />
+
+<param name="merch_guid" type="text"
+label="Идентификатор продавца" description="Идентификатор продавца в системе kaznachey.ua" />
+
+<param name="merch_secret_key" type="text"
+label="Секретный ключ" description="Секретный ключ магазина в системе kaznachey.ua" />
+
+<param name="merch_order_status" type="vmorderstate" scope="com_virtuemart" default="P" label="Статус заказа после оплаты" description="" />
+
+<param name="merch_redirect_page" type="text"
+label="Страница редиректа после покупки" description="Оставить пустым если хотите использовать стандартную страницу" />
+
+<param name="payment_language" type="languages"
+label="Язык интерфейса" description="" client="site" default="RU" />
+
+</params>
+
+</install>
